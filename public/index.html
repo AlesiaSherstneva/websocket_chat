@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8"/>
     <title>My Chat</title>
+    <style>
+        body{
+            background-color: #F1C40F;
+        }
+        p {
+            color: #6E2C00;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
     <script type="text/javascript">
-        var websocket;
+        let websocket;
 
         function init() {
             websocket = new WebSocket("ws://localhost:8080/chat");
@@ -12,7 +21,7 @@
 
             }
             websocket.onmessage = function (event) {
-                var $textarea = document.getElementById("messages");
+                let $textarea = document.getElementById("messages");
                 $textarea.value = $textarea.value + event.data + "\n";
             }
             websocket.onclose = function (event) {
@@ -21,9 +30,9 @@
         }
 
         function sendMessage() {
-            var messageField = document.getElementById("message");
-            var userNameField = document.getElementById("username");
-            var message = userNameField.value + ":" + messageField.value;
+            let messageField = document.getElementById("message");
+            let userNameField = document.getElementById("username");
+            let message = userNameField.value + ":" + messageField.value;
             websocket.send(message);
             messageField.value = '';
         }
@@ -33,19 +42,19 @@
 <div id="body">
     <div id="menu">
         <p class="welcome">
-            Hi, <label for="username"></label><input id="username" value="buddy"/>
+            Hi, <label for="username"></label><input id="username" value="buddy"/> (enter your nickname instead)
         </p>
 
         <div style="clear: both"></div>
     </div>
 
     <div id="chatbox">
-        <label for="messages"></label><textarea id="messages" rows="20" cols="50" readonly="readonly"></textarea>
+        <label for="messages"></label><textarea id="messages" rows="35" cols="55" readonly="readonly"></textarea>
     </div>
 
     <form name="message" action="">
         <label for="message"></label><input name="usermsg" type="text" id="message" size="40"/>
-        <input type="button" name="submitmsg" value="Send..." onclick="sendMessage();"/>
+        <input type="button" name="submitmsg" value="Send a message" onclick="sendMessage();"/>
     </form>
 </div>
 </body>
