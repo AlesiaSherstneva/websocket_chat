@@ -1,4 +1,4 @@
-package chat;
+package generator;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
