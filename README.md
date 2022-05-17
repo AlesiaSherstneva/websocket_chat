@@ -5,5 +5,5 @@
 <p>Использованные технологии: Java SE, Java EE, Jetty, a little of HTML & JavaScript.<p>
 
 ![img.png](img.png)
-<br>
+<br><br><br>
 ![img_1.png](img_1.png)
