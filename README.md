@@ -11,7 +11,7 @@
 
 Функционал: при входе в верхнем маленьком окошке вводится имя пользователя (nickname), 
 после чего в большом окне можно писать сообщения, которые будут отображаться во всех открытых окнах 
-чата во всех браузерах :couple::two_men_holding_hands::two_women_holding_hands:.
+чата во всех браузерах :boy::girl::woman::man::older_woman::older_man::man_with_turban:.
 
 Использованные технологии: Java EE, Maven, Jetty, a little of HTML & JS.
 
